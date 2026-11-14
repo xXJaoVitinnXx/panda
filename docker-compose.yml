@@ -6,8 +6,10 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./data:/data
+      - panda-data:/data
     # The schedule and !sleep use this time zone (UTC when it isn't set).
     environment:
-      - TZ=Europe/Istanbul
+      - TZ=America/Sao_Paulo
     # The first start prints the panel password: docker compose logs panda
+volumes:
+  panda-data:
